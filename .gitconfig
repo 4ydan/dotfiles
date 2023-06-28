@@ -141,8 +141,6 @@
 #[remote "origin"]
 	#fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
 
-[commit]
-	gpgsign = true
 [pull]
 	rebase = true
 
@@ -150,3 +148,5 @@
 
     name = Aydan Ghazani
     email = ghazani.aydan@gmail.com
+[safe]
+	directory = /workspaces/dotfiles
