@@ -1,0 +1,7 @@
+alias '?'=duck
+alias '??'=gpt
+alias tree='tree -a'
+alias df='df -h'
+alias free='free -h'
+alias temp='cd $(mktemp -d)'
+alias coin="clip '(yes|no)'"

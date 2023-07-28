@@ -1,0 +1,22 @@
+#!/bin/sh
+set -e
+
+user=charmbracelet
+repo=mods
+
+arch=$(uname -m)
+[ "$arch" = x86_64 ] && arch=amd64
+
+latest="https://api.github.com/repos/$user/$repo/releases/latest"
+echo "$latest"
+ver=$(curl -sS "$latest" | jq -r .zipball_url) && test -n "$ver"
+ver=${ver##*/}
+ver=${ver#v}
+deb="${repo}_${ver}_${arch}.deb"
+echo "$ver"
+url="https://github.com/$user/$repo/releases/download/v${ver}/$deb"
+echo "$url"
+dir="$(mktemp -d)"
+echo "$dir"
+cd "$dir"
+curl -LO "$url" && sudo dpkg -i ./*.deb

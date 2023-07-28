@@ -1,0 +1,1 @@
+sudo apt install nmap jq pcregrep lynx make uidmap python-is-python3 libcurses-perl figlet cmatrix build-essential

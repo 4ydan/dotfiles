@@ -150,3 +150,5 @@
     email = ghazani.aydan@gmail.com
 [safe]
 	directory = /workspaces/dotfiles
+# [credential]
+# 	helper = "!f() { /root/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/node /tmp/vscode-remote-containers-542e2913-cc1c-4cc5-bc8a-e28a5323882c.js git-credential-helper $*; }; f"

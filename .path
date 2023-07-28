@@ -1,0 +1,2 @@
+# Add scripts
+export PATH="$PATH:${HOME}/Scripts"
