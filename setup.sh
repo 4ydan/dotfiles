@@ -1,6 +1,9 @@
 #!/bin/sh
 set -e
 
+# Install starship prompt
+curl -sS https://starship.rs/install.sh | sh
+
 # add aliases for dotfiles (excluding .git)
 for file in $(find "$PWD" -name ".*" -not -name ".git"); do
     f=$(basename "$file")
