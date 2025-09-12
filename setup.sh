@@ -1,12 +1,11 @@
 #!/bin/sh
 set -e
 
-# add aliases for dotfiles
-for file in $(find "$PWD" -name ".*"); do
+# add aliases for dotfiles (excluding .git)
+for file in $(find "$PWD" -name ".*" -not -name ".git"); do
     f=$(basename "$file")
     ln -sfn "$file" "$HOME/$f"
 done
-ln -sfn "$PWD/gitignore" "$HOME/.gitignore"
 
 apt-get update
 
