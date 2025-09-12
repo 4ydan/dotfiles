@@ -1,2 +1,0 @@
-# Add scripts
-export PATH="$PATH:${HOME}/dotfiles/scripts"
