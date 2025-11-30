@@ -1,3 +1,6 @@
+for cmd in pytest mypy ruff black ansible-playbook ansible-galaxy; do
+  alias $cmd="uv run $cmd"
+done
 alias tree='tree -a'
 alias df='df -h'
 alias free='free -h'
@@ -9,7 +12,6 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
-alias -- -="cd -"
 
 alias pass='openssl rand -base64 12'
 
